@@ -110,6 +110,27 @@ Possible future improvements:
 * add configurable message length
 * add documentation for memory use
 * add unit-style test sketch
+* add optional message integrity checking using checksum, CRC-8, or CRC-16
+
+## Possible Message Integrity Support
+
+A future version could optionally include a checksum or CRC with each queued message.
+
+That would be useful if queued messages are later sent over:
+
+- Serial
+- radio modules
+- telemetry links
+- SD card logs
+- unreliable or noisy connections
+
+Possible approaches include:
+
+- simple additive checksum for low-overhead debugging
+- CRC-8 for short messages
+- CRC-16 for stronger error detection
+
+This is not currently implemented.
 
 ## Related Use Cases
 
